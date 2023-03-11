@@ -3,6 +3,7 @@
 
 
 <!-- === Header Starts === -->
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -18,111 +19,131 @@
 <body>
 
 
-<!-- === Home Section Starts === -->
-<div class="section">
-  <!-- === Title Starts === -->
-  <div class="header">
-    <div class="title", style="padding-top: 25pt;">  <!-- Set padding as 10 if title is with two lines. -->
-      Look&Listen: Multi-Modal Correlation Learning for Active Speaker Detection and Speech Enhancement
+  <!-- === Home Section Starts === -->
+  <div class="section">
+    <!-- === Title Starts === -->
+    <div class="header">
+      <div class="title" , style="padding-top: 25pt;"> <!-- Set padding as 10 if title is with two lines. -->
+        Look&Listen: Multi-Modal Correlation Learning for Active Speaker Detection and Speech Enhancement
+      </div>
     </div>
-  </div>
-  <!-- === Title Ends === -->
-  <div class="author">
-      <a href="https://scholar.google.com/citations?user=7iM62mUAAAAJ&hl=en" target="_blank">Junwen Xiong<sup>1</sup>,&nbsp;</a>
+    <!-- === Title Ends === -->
+    <div class="author">
+      <a href="https://scholar.google.com/citations?user=7iM62mUAAAAJ&hl=en" target="_blank">Junwen
+        Xiong<sup>1</sup>,&nbsp;</a>
       <a href="#" target="_blank"> Ganglai Wang<sup>1</sup>,&nbsp;</a>
-      <a href="https://teacher.nwpu.edu.cn/2011010119.html" target="_blank"> Peng Zhang<sup>1</sup>,</a>
-      <a href="https://smcs.ncu.edu.cn/xxgk/xrld/e5556f612a974fcfafd7a53437528405.htm" target="_blank">Wei Huang<sup>2</sup>,</a>
-      <a href="https://teacher.nwpu.edu.cn/yufeizha" target="_blank"> Yufei Zha<sup>1</sup>,</a> 
-      <a href="https://scholar.google.ca/citations?user=E6zbSYgAAAAJ&hl=en" target="_blank">Guangtao Zhai<sup>3</sup>,</a>
-    </div>
-  <div class="institution">
-    Northwestern Polytechnical University<sup>1</sup>
-    </div>
-    <div class="institution">
-    Nanchang University<sup>2</sup>
+      <a href="https://teacher.nwpu.edu.cn/2011010119.html" target="_blank"> Peng Zhang<sup>1,2</sup>,</a>
+      <a href="https://smcs.ncu.edu.cn/xxgk/xrld/e5556f612a974fcfafd7a53437528405.htm" target="_blank">Wei
+        Huang<sup>3</sup>,</a>
+      <a href="https://teacher.nwpu.edu.cn/yufeizha" target="_blank"> Yufei Zha<sup>1,2</sup>,</a>
+      <a href="https://scholar.google.ca/citations?user=E6zbSYgAAAAJ&hl=en" target="_blank">Guangtao
+        Zhai<sup>4</sup>,</a>
     </div>
     <div class="institution">
-    Shanghai Jiao tong University<sup>3</sup>
+      Northwestern Polytechnical University<sup>1</sup>
+    </div>
+    <div class="institution">
+      Ningbo Institute of Northwestern Polytechnical University <sup>2</sup>
+    </div>
+    <div class="institution">
+      Nanchang University<sup>3</sup>
+    </div>
+    <div class="institution">
+      Shanghai Jiao tong University<sup>4</sup>
+    </div>
+    <div class="conference">
+      CVPR, 2023
+    </div>
+    <div class="link" style="font-size: 14pt;">
+      <a href="#" target="_blank">[Paper]</a>&nbsp;
+    </div>
   </div>
-  <div class="conference">
-    CVPR, 2023
-  </div>
-  <div class="link" style="font-size: 14pt;">
-    <a href="#" target="_blank">[Paper]</a>&nbsp;
-  </div>
-</div>
-<!-- === Home Section Ends === -->
+  <!-- === Home Section Ends === -->
 
 
-<!-- === Overview Section Starts === -->
-<div class="section">
-  <div class="title">Overview</div>
-  <div class="body">
-  In this study, a consistency-aware audio-visual saliency prediction network (CASP-Net) is proposed, which takes a comprehensive consideration of the audio-visual semantic interaction and consistent perception. In addition a two-stream encoder for elegant association between video frames and corresponding sound source, a novel consistency-aware predictive coding is also designed to improve the consistency within audio and visual representations iteratively. To further aggregate the multi-scale audio-visual information, a saliency decoder is introduced for the final saliency map generation. Substantial experiments demonstrate that the proposed CASP-Net outperforms the other state-of-the-art methods on six challenging audio-visual eye-tracking datasets
+  <!-- === Overview Section Starts === -->
+  <div class="section">
+    <div class="title">Overview</div>
+    <div class="body">
+      In this study, a consistency-aware audio-visual saliency prediction network (CASP-Net) is proposed, which takes a
+      comprehensive consideration of the audio-visual semantic interaction and consistent perception. In addition a
+      two-stream encoder for elegant association between video frames and corresponding sound source, a novel
+      consistency-aware predictive coding is also designed to improve the consistency within audio and visual
+      representations iteratively. To further aggregate the multi-scale audio-visual information, a saliency decoder is
+      introduced for the final saliency map generation. Substantial experiments demonstrate that the proposed CASP-Net
+      outperforms the other state-of-the-art methods on six challenging audio-visual eye-tracking datasets.
+    </div>
   </div>
-</div>
-<!-- === Overview Section Ends === -->
+  <!-- === Overview Section Ends === -->
 
 
-<!-- === Overview Section Starts === -->
-<div class="section">
-  <div class="title">Method</div>
-  <!-- <div class="title">
+  <!-- === Overview Section Starts === -->
+  <div class="section">
+    <div class="title">Method</div>
+    <!-- <div class="title">
     <img src="./assets/Figure1.png" width="800">
   </div> -->
 
 
-  <div class="title">
+    <div class="title">
 
-  <div class="body">
-    The example figure shows the saliency results of our model compared to STAViS in audio and video temporal sequences. In the last time segment, the audio information that occurs in the event is inconsistent with the visual information. Our method can cope with such challenge by automatically learning to align the audio-visual features. The results of STAViS, however, show that it is incapable to address the problem of audio-visual inconsistency. GT denotes ground truth.
-  </div>
+      <div class="body">
+        The example figure shows the saliency results of our model compared to STAViS in audio and video temporal
+        sequences. In the last time segment, the audio information that occurs in the event is inconsistent with the
+        visual information. Our method can cope with such challenge by automatically learning to align the audio-visual
+        features. The results of STAViS, however, show that it is incapable to address the problem of audio-visual
+        inconsistency. GT denotes ground truth.
+      </div>
 
-    <img src="./assets/audio_visual_inconsistency.png" width="800">
+      <img src="./assets/audio_visual_inconsistency.png" width="800">
 
-  </div>
-  <!-- <br></br> -->
-  <div class="title">
-  <div class = "body">
-     The proposed <font size="4" color="blue">CASP-Net</font> is composed of: a two-stream network to obtain visual saliency and auditory saliency feature, an audio-visual interaction module to integrate the visual and auditory conspicuity maps, a consistency-aware predictive coding module to reason the coherent spatio-temporal visual feature with audio feature, and a saliency decoder to estimate saliency map with multi-scale audio-visual features. 
-  </div>
-    <img src="./assets/model_structure.png" width="800">
-  </div>
-</div>
-<!-- === Overview Section Ends === -->
-
-
-<!-- === Result Section Starts === -->
-<div class="section">
-  <div class="title">Results</div>
-  <div class="body">
-    Qualitative results of audio-visual saliency maps:
-    <!-- Adjust the number of rows and columns (EVERY project differs). -->
-    <table width="100%" style="margin: 20pt 0; text-align: center;">
-      <tr>
-        <td><img src="./assets/overall_results.png" height="90%"></td>
-      </tr>
-    </table>
-    <div> 
-      Demo video.
     </div>
-    <br>
-
-    <table style="margin: 20pt 0; text-align: center;">
-      <video width="100%" height="60%" controls>
-        <source src="./assets/demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </table>
+    <!-- <br></br> -->
+    <div class="title">
+      <div class="body">
+        The proposed <font size="4" color="blue">CASP-Net</font> is composed of: a two-stream network to obtain visual
+        saliency and auditory saliency feature, an audio-visual interaction module to integrate the visual and auditory
+        conspicuity maps, a consistency-aware predictive coding module to reason the coherent spatio-temporal visual
+        feature with audio feature, and a saliency decoder to estimate saliency map with multi-scale audio-visual
+        features.
+      </div>
+      <img src="./assets/model_structure.png" width="800">
+    </div>
   </div>
-</div>
-<!-- === Result Section Ends === -->
+  <!-- === Overview Section Ends === -->
 
 
-<!-- === Reference Section Starts === -->
-<div class="section">
-  <div class="bibtex">BibTeX</div>
-<pre>
+  <!-- === Result Section Starts === -->
+  <div class="section">
+    <div class="title">Results</div>
+    <div class="body">
+      Qualitative results of audio-visual saliency maps.
+      <!-- Adjust the number of rows and columns (EVERY project differs). -->
+      <table width="100%" style="margin: 20pt 0; text-align: center;">
+        <tr>
+          <td><img src="./assets/overall_results.png" height="90%"></td>
+        </tr>
+      </table>
+      <div>
+        Demo video.
+      </div>
+      <br>
+
+      <table style="margin: 20pt 0; text-align: center;">
+        <video width="100%" height="60%" controls>
+          <source src="./assets/demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </table>
+    </div>
+  </div>
+  <!-- === Result Section Ends === -->
+
+
+  <!-- === Reference Section Starts === -->
+  <div class="section">
+    <div class="bibtex">BibTeX</div>
+    <pre>
   @inproceedings{xiong2023casp,
     title={CASP-Net: Rethinking Video Saliency Prediction from an Audio-Visual Consistency Perceptual Perspective},
     author={Junwen Xiong, Ganglai Wang, Peng Zhang, Wei Huang, Yufei Zha and Guangtao Zhai},
@@ -131,9 +152,9 @@
   }
 </pre>
 
-  <!-- BZ: we should give other related work enough credits, -->
-  <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
-  <!-- <div class="ref">Related Work</div>
+    <!-- BZ: we should give other related work enough credits, -->
+    <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
+    <!-- <div class="ref">Related Work</div>
   <div class="citation">
     <div class="image"><img src="./assets/tnt.png"></div>
     <div class="comment">
@@ -141,7 +162,7 @@
         Hang Zhao, Jiyang Gao, Tian Lan, Chen Sun, Benjamin Sapp, Balakrishnan Varadarajan, Yue Shen, Yi Shen, Yuning Chai, Cordelia Schmid, Congcong Li, Dragomir Anguelov.
         TNT: Target-driveN Trajectory Prediction.
         CoRL 2020.</a><br> -->
-      <!-- <b>Comment:</b>
+    <!-- <b>Comment:</b>
       This is a short comment. -->
     <!-- </div>
   </div>
@@ -152,7 +173,7 @@
         Jiyang Gao, Chen Sun, Hang Zhao, Yi Shen, Dragomir Anguelov, Congcong Li, Cordelia Schmid.
         VectorNet: Encoding HD Maps and Agent Dynamics from Vectorized Representation.
         CVPR 2020.</a><br> -->
-      <!-- <b>Comment:</b>
+    <!-- <b>Comment:</b>
       This is a long comment. This comment is just used to test how long comments can fit the template. -->
     <!-- </div>
   </div>
@@ -163,13 +184,14 @@
         Liangji Fang, Qinhong Jiang, Jianping Shi, Bolei Zhou.
         TPNet: Trajectory Proposal Network for Motion Prediction.
         CVPR 2020.</a><br> -->
-      <!-- <b>Comment:</b>
+    <!-- <b>Comment:</b>
       This is a long comment. This comment is just used to test how long comments can fit the template. -->
     <!-- </div>
   </div>
 </div> -->
-<!-- === Reference Section Ends === -->
+    <!-- === Reference Section Ends === -->
 
 
 </body>
+
 </html>
