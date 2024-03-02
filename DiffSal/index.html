@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>DiffSal: Joint Audio and Video Learning for Diffusion Saliency Prediction</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+  <!-- === Home Section Starts === -->
+  <div class="section">
+    <!-- === Title Starts === -->
+    <div class="header">
+      <div class="title" , style="padding-top: 25pt;"> <!-- Set padding as 10 if title is with two lines. -->
+        DiffSal: Joint Audio and Video Learning for Diffusion Saliency Prediction
+      </div>
+    </div>
+    <!-- === Title Ends === -->
+    <div class="author">
+      <a href="https://scholar.google.com/citations?user=7iM62mUAAAAJ&hl=en" target="_blank">Junwen
+        Xiong<sup>1,2</sup>,&nbsp;</a>
+      <a href="https://teacher.nwpu.edu.cn/2011010119.html" target="_blank"> Peng Zhang<sup>1,2</sup>,</a>
+      <a href="#" target="_blank"> Tao You<sup>1</sup>,&nbsp;</a>
+      <a href="#" target="_blank"> Chuanyue Li<sup>1</sup>,&nbsp;</a>
+      <a href="https://smcs.ncu.edu.cn/xxgk/xrld/e5556f612a974fcfafd7a53437528405.htm" target="_blank">Wei
+        Huang<sup>3</sup>,</a>
+      <a href="https://teacher.nwpu.edu.cn/yufeizha" target="_blank"> Yufei Zha<sup>1,2</sup>,</a>
+    </div>
+    <div class="institution">
+      Northwestern Polytechnical University<sup>1</sup>
+    </div>
+    <div class="institution">
+      Ningbo Institute of Northwestern Polytechnical University <sup>2</sup>
+    </div>
+    <div class="institution">
+      Nanchang University<sup>3</sup>
+    </div>
+    <div class="conference">
+      CVPR, 2024
+    </div>
+    <div class="link" style="font-size: 14pt;">
+      <a href="">[Paper]</a>&nbsp; <a href="https://github.com/junwenxiong/diff_sal">[Code]</a>
+    </div>
+  </div>
+  <!-- === Home Section Ends === -->
+
+
+  <!-- === Overview Section Starts === -->
+  <div class="section">
+    <div class="title">Overview</div>
+    <div class="body">
+      Audio-visual saliency prediction can draw support from diverse modality complements, but further performance enhancement is still challenged by customized architectures as well as task-specific loss functions. 
+      In recent studies, denoising diffusion models have shown more promising in unifying task frameworks owing to their inherent ability of generalization. Following this motivation, a novel Diffusion 
+      architecture for generalized audio-visual Saliency prediction (DiffSal) is proposed in this work, which formulates the prediction problem as a conditional generative task of the saliency map 
+      by utilizing input audio and video as the conditions. Based on the spatio-temporal audio-visual features, an extra network Saliency-UNet is designed to perform multi-modal attention modulation for 
+      progressive refinement of the ground-truth saliency map from the noisy map. Extensive experiments demonstrate that the proposed DiffSal can achieve excellent performance across six challenging 
+      audio-visual benchmarks, with an average relative improvement of 6.3\% over the previous state-of-the-art results by six metrics.
+
+    </div>
+  </div>
+  <!-- === Overview Section Ends === -->
+
+
+  <!-- === Overview Section Starts === -->
+  <div class="section">
+    <div class="title">Method</div>
+    <!-- <div class="title">
+    <img src="./assets/Figure1.png" width="800">
+  </div> -->
+
+
+    <div class="title">
+
+      <div class="body">
+        Both the localization-based and 3D convolution-based methods use tailored network structures and sophisticated loss functions to predict saliency areas.
+        Differently, our diffusion-based approach is a generalized audio-visual saliency prediction framework using simple MSE objective function.
+      </div>
+
+      <img src="./assets/diffsal_1.png" width="800">
+
+    </div>
+    <!-- <br></br> -->
+    <div class="title">
+      <div class="body">
+        The proposed <font size="4" color="blue">DiffSal</font> contains Video and Audio Encoders as well as Saliency-UNet.
+        The former is used to extract multi-scale spatio-temporal video features and audio features  from image sequences and corresponding audio signals. 
+        By conditioning on these semantic video and audio features, the latter  performs multi-modal attention modulation to progressively refine the ground-truth 
+        saliency map from the noisy map.
+      </div>
+      <img src="./assets/diffsal_2.png" width="800">
+    </div>
+  </div>
+  <!-- === Overview Section Ends === -->
+
+
+  <!-- === Result Section Starts === -->
+  <div class="section">
+    <div class="title">Results</div>
+    <div class="body">
+      Qualitative results of audio-visual saliency maps.
+      <!-- Adjust the number of rows and columns (EVERY project differs). -->
+      <table width="100%" style="margin: 20pt 0; text-align: center;">
+        <tr>
+          <td><img style="width: 100%;" src="./assets/diffsal_3.png" height="90%"></td>
+        </tr>
+      </table>
+      <div>
+        Demo video.
+      </div>
+      <br>
+
+      <table style="margin: 20pt 0; text-align: center;">
+        <video width="100%" height="60%" controls>
+          <source src="./assets/diffsal_demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </table>
+    </div>
+  </div>
+  <!-- === Result Section Ends === -->
+
+
+  <!-- === Reference Section Starts === -->
+  <div class="section">
+    <div class="bibtex">BibTeX</div>
+    <pre>
+  @inproceedings{xiong2024diffsal,
+    title={DiffSal: Joint Audio and Video Learning for Diffusion Saliency Prediction},
+    author={Junwen Xiong, Peng Zhang, Tao You, Chuanyue Li, Wei Huang and Yufei Zha},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year={2024}
+  }
+</pre>
+
+    <!-- BZ: we should give other related work enough credits, -->
+    <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
+    <!-- <div class="ref">Related Work</div>
+  <div class="citation">
+    <div class="image"><img src="./assets/tnt.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/pdf/2008.08294.pdf" target="_blank">
+        Hang Zhao, Jiyang Gao, Tian Lan, Chen Sun, Benjamin Sapp, Balakrishnan Varadarajan, Yue Shen, Yi Shen, Yuning Chai, Cordelia Schmid, Congcong Li, Dragomir Anguelov.
+        TNT: Target-driveN Trajectory Prediction.
+        CoRL 2020.</a><br> -->
+    <!-- <b>Comment:</b>
+      This is a short comment. -->
+    <!-- </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/vec2.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/pdf/2005.04259.pdf" target="_blank">
+        Jiyang Gao, Chen Sun, Hang Zhao, Yi Shen, Dragomir Anguelov, Congcong Li, Cordelia Schmid.
+        VectorNet: Encoding HD Maps and Agent Dynamics from Vectorized Representation.
+        CVPR 2020.</a><br> -->
+    <!-- <b>Comment:</b>
+      This is a long comment. This comment is just used to test how long comments can fit the template. -->
+    <!-- </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/TP.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/pdf/2004.12255.pdf" target="_blank">
+        Liangji Fang, Qinhong Jiang, Jianping Shi, Bolei Zhou.
+        TPNet: Trajectory Proposal Network for Motion Prediction.
+        CVPR 2020.</a><br> -->
+    <!-- <b>Comment:</b>
+      This is a long comment. This comment is just used to test how long comments can fit the template. -->
+    <!-- </div>
+  </div>
+</div> -->
+    <!-- === Reference Section Ends === -->
+
+
+</body>
+
+</html>
